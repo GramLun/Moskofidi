@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5c8dbb</color> // actionBar
+    <color name="colorPrimaryDark">#5c8dbb</color> // строка состояния
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorBlueText">#5c8dbb</color>
+    <color name="tinkoffBlue">#03a9f5</color>
+    <color name="black">#000000</color>
+</resources>

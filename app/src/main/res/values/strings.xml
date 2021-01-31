@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Developers Life</string>
+    <string name="latest">Последние</string>
+    <string name="top">Лучшие</string>
+    <string name="hot">Горячие</string>
+    <string name="prev">buttonPrev</string>
+    <string name="next">buttonNext</string>
+    <string name="description">description</string>
+    <string name="gifview">gifView</string>
+    <string name="noConnection"><b>Ой-ей!</b> \n Интернет соединение отсутсвует</string>
+    <string name="noData">Похоже этот раздел пуст!</string>
+</resources>

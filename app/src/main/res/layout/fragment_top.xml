@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.FragmentTop">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gifContainerTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/gif_corner"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgViewTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="470dp"
+                    android:contentDescription="@string/gifview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/textViewTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/description_corner"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgViewTop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateDrawable="@drawable/progress_bar"
+                    app:layout_constraintBottom_toBottomOf="@+id/gifContainerTop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/gifContainerTop" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnPrevTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="80dp"
+                android:backgroundTint="@color/design_default_color_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/round_settings_backup_restore_24"
+                app:borderWidth="0dp"
+                app:fabSize="auto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifContainerTop"
+                android:contentDescription="@string/prev" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnNextTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="130dp"
+                android:backgroundTint="@color/design_default_color_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/round_chevron_right_24"
+                app:borderWidth="0dp"
+                app:fabSize="auto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifContainerTop"
+                android:contentDescription="@string/next" />
+
+            <ImageView
+                android:id="@+id/imgErrorTop"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/gifview"
+                android:src="@mipmap/baseline_wifi_off_black_48"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/gifContainerTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/gifContainerTop" />
+
+            <TextView
+                android:id="@+id/textErrorTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/noConnection"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgErrorTop" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
